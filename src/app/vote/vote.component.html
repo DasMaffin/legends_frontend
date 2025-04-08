@@ -1,1 +1,20 @@
-<p>vote works!</p>
+<div class="vote-container">
+    <h1>{{ vote.Title }}</h1>
+
+    <div *ngFor="let option of vote.Options" class="vote-option">
+        <button (click)="selectOption(option)">
+            <input *ngIf="isRankedVote()" [(ngModel)]="option.OptionRank" (ngModelChange)="onRankChange(option)" type="number" placeholder="Rank" class="styled-input">
+            <img *ngIf="isSimpleVote()" [src]="selectedOption === option ? 'assets/checkbox-checked-64.png' : 'assets/checkbox-unchecked-64.png'" alt="Option Image" class="option-image">
+            {{ option.OptionTitle }}: {{ option.OptionDescription }}
+        </button>
+    </div>
+
+    <div *ngIf="selectedOption">
+        <p>You selected: {{ selectedOption.OptionTitle }}</p>
+    </div>
+
+    <div *ngIf="!selectedOption">
+        <p>No option selected yet.</p>
+    </div>
+</div>
+  
