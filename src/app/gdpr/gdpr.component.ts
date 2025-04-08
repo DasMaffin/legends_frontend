@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-gdrp',
+  selector: 'app-gdpr',
   imports: [],
-  templateUrl: './gdrp.component.html',
-  styleUrl: './gdrp.component.scss'
+  templateUrl: './gdpr.component.html',
+  styleUrl: './gdpr.component.scss'
 })
 export class GdrpComponent {
 

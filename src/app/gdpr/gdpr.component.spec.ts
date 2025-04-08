@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GdrpComponent } from './gdrp.component';
+import { GdrpComponent } from './gdpr.component';
 
 describe('GdrpComponent', () => {
   let component: GdrpComponent;
