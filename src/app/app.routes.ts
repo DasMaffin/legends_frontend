@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { GdrpComponent } from './gdpr/gdpr.component';
+import { GdprComponent } from './gdpr/gdpr.component';
 import { IndexComponent } from './index/index.component';
 import { VoteComponent } from './vote/vote.component';
 
 export const routes: Routes = [    
     { path: '', component: IndexComponent },
-    { path: 'gdpr', component: GdrpComponent },
+    { path: 'gdpr', component: GdprComponent },
     { path: 'vote', component: VoteComponent },
 
 

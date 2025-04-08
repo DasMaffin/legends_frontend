@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './gdpr.component.html',
   styleUrl: './gdpr.component.scss'
 })
-export class GdrpComponent {
+export class GdprComponent {
 
 }
