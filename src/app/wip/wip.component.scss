@@ -1,0 +1,73 @@
+// Base styling for the WIP page
+.wip-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #141414, #0e0e0e 70%);
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+
+    // Add a subtle neon animation to give it a dynamic gaming feel
+    animation: backgroundPulse 5s infinite alternate;
+}
+
+// Header container for the logo area
+.header {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    .logo-placeholder {
+        width: 250px;
+        aspect-ratio: 1/1;
+        background: #1f1f1f;
+        border: 2px solid #00ffcc;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+        }
+    }
+}
+
+// Content styling for the text
+.content {
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00ffcc;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 10px 0;
+        max-width: 600px;
+    }
+
+    .subtext {
+        font-size: 1rem;
+        color: #8a8a8a;
+    }
+}
+
+// Keyframes for a subtle background animation
+@keyframes backgroundPulse {
+    from {
+        filter: brightness(0.9);
+    }
+    to {
+        filter: brightness(1.1);
+    }
+}
+  
