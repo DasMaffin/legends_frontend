@@ -1,0 +1,41 @@
+.logo-credit {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #ccc;
+    z-index: 1000;
+
+    a {
+        color: #ccc;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+
+        &:hover {
+            text-decoration: underline;
+
+            .external-icon {
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    .external-icon {
+        font-size: 0.85em;
+        opacity: 0.7;
+        transition: transform 0.2s ease;
+    }
+}
+
+
+.logo-credit a {
+    color: #666;
+    text-decoration: underline;
+}
+
+.logo-credit a:hover {
+    text-decoration: underline;
+}
