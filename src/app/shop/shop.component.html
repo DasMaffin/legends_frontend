@@ -1,0 +1,55 @@
+<h1>Willkommen im Shop von Legends!</h1>
+<h2>
+  Aktuell noch im Aufbau, aber es können bereits Punkte erworben werden.
+  <br> Nach erfolgreichem Kauf muss das Team noch manuell informiert werden. Dazu gibt es mehrere Wege:
+</h2>
+<ul>
+  <li>
+    Discord Server:
+    <a href="https://discord.gg/xU8jNSamqd">https://discord.gg/xU8jNSamqd</a>
+    → kanal: "support-ticket" → "Open ticket for Support" anklicken → Kaufbestätigung und Steam ID posten.
+  </li>
+  <li>
+    Discord Privat: &#64;dasmaffin als Freund hinzufügen → Kaufbestätigung und Steam ID senden.
+  </li>
+  <li>
+    E-mail:
+    <a href="mailto:admin@dasmaffin.com">admin&#64;dasmaffin.com</a>
+    → Kaufbestätigung und Steam ID senden.
+    <span style="color: red;">
+      Dies könnte übersehen werden, da bei E-Mails der Spam Ordner aus Sicherheitsgründen nicht überprüft wird!
+    </span>
+  </li>
+</ul>
+
+
+
+
+<!-- Buttons to open specific views -->
+<div class="button-row">
+  <button class="toggle-btn" (click)="openPanel('a')">100 Donator Punkte kaufen</button>
+  <button class="toggle-btn" (click)="openPanel('b')">1.100 Donator Punkte kaufen</button>
+  <button class="toggle-btn" (click)="openPanel('c')">12.000 Donator Punkte kaufen</button>
+</div>
+
+<!-- Side panel with conditional content -->
+<div class="side-panel" [class.open]="isPanelOpen">
+  <div class="panel-content">    
+    <button class="close-btn" (click)="closePanel()">×</button>
+    <h2 *ngIf="isLoading" id="LoadingText">Loading. Please wait!</h2>
+    <div *ngIf="panelView === 'a'">
+      <div id="paypal-container-TCHG6EJ98LZFY"></div>
+      <img src="assets/qr-codes/100prem.png" alt="100prem" />
+    </div>
+
+    <div *ngIf="panelView === 'b'">
+      <div id="paypal-container-5TPKVMNH6MQT6"></div>
+      <img src="assets/qr-codes/1100prem.png" alt="1100prem" />
+    </div>
+
+    <div *ngIf="panelView === 'c'">
+      <div id="paypal-container-MZREY6KBL8PRS"></div>
+      <img src="assets/qr-codes/12000prem.png" alt="12000prem" />
+    </div>
+  </div>
+</div>

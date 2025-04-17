@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+
+:host {
+  display: block;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00bfff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #c0c0c0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    background-color: #1e1e1e;
+    border-left: 4px solid #00bfff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.warning {
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 600px;
+  height: 100vh;
+  background-color: #101010;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+
+  &.open {
+    right: 0;
+  }
+
+  .panel-content {
+    padding: 1.5rem;
+  }
+}
+  
+.close-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    color: #000;
+  }
+}
